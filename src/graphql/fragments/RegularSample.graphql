@@ -1,0 +1,9 @@
+fragment RegularSample on Sample {
+  id
+  createdAt
+  updatedAt
+  title
+  desc
+  imagesrc
+  url
+}

@@ -1,0 +1,5 @@
+mutation CreateSample($options: SampleType!) {
+  createSample(options: $options) {
+    ...RegularSample
+  }
+}

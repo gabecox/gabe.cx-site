@@ -1,0 +1,5 @@
+query Posts($page: Int, $limit: Int!) {
+  posts(page: $page, limit: $limit) {
+    ...RegularPost
+  }
+}

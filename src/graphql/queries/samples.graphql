@@ -1,0 +1,5 @@
+query Samples {
+  samples {
+    ...RegularSample
+  }
+}
