@@ -89,6 +89,16 @@ export const createUrqlClient = (ssrExchange: any, ctx: any) => {
               },
             });
             document.dispatchEvent(toastEvent);
+          } else if (err.message.includes("Not Gabe")) {
+            router.reload;
+            const toastEvent = new CustomEvent("toast", {
+              detail: {
+                title: "Error",
+                description: "You need to be Gabe to do that",
+                status: "error",
+              },
+            });
+            document.dispatchEvent(toastEvent);
           } else {
             console.error(err);
             return;

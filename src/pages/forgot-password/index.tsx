@@ -21,8 +21,7 @@ const PasswordReset: React.FC<ForgotPasswordProps> = ({}) => {
             onSubmit={async (values) => {
               await forgot(values);
               return;
-            }}
-          >
+            }}>
             {({ isSubmitting }) => (
               <Form>
                 <InputField name="email" placeholder="email" label="Email" />
@@ -30,9 +29,7 @@ const PasswordReset: React.FC<ForgotPasswordProps> = ({}) => {
                   mt={4}
                   type="submit"
                   loadingText="Submitting"
-                  isLoading={isSubmitting}
-                  colorScheme="teal"
-                >
+                  isLoading={isSubmitting}>
                   Submit
                 </Button>
               </Form>
