@@ -17,12 +17,15 @@ interface PortfolioCardProps {
 }
 
 const SampleInfo: React.FC<PortfolioCardProps> = ({ data }) => {
+  const desc = data.desc.split("\n");
   return (
     <Box p={5}>
       <NextLink href={data?.url} passHref>
         <Link>
           <Heading fontSize="xl">{data.title}</Heading>
-          <Text mt={4}>{data.desc}</Text>
+          {desc.map((p) => (
+            <Text mt={4}>{p}</Text>
+          ))}
         </Link>
       </NextLink>
     </Box>
