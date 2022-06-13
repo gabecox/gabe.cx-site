@@ -13,8 +13,8 @@ export const PostCard: React.FC<PostCardProps> = ({
   },
 }) => {
   return (
-    <Wrapper variant="md" shadow="2xl">
-      <Box p={5} shadow="md" borderWidth="1px">
+    <Wrapper variant="md" shadow="md">
+      <Box p={5} borderWidth="1px">
         <Flex>
           <Heading fontSize="xl">{data.title}</Heading>
           <Heading ml={"auto"} fontSize="sm"></Heading>

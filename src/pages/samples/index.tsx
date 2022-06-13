@@ -16,9 +16,6 @@ const SamplesIndex = () => {
       <Layout>
         <br />
         <Wrapper bg={"inherit"}>
-          {/* <NextLink href={"samples/new-sample"}>
-            <Button variant={"link"}>New Sample</Button>
-          </NextLink> */}
           <Wrap spacing="30px" justify="space-between">
             {!data || data?.samples.length === 0 ? (
               <div key={"0"}>no data</div>

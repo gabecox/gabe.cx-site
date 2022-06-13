@@ -50,7 +50,7 @@ export const PortfolioCard: React.FC<
 > = ({ data, ...props }) => {
   return (
     <>
-      <Wrapper variant="sm" shadow="2xl" cursor={"pointer"} {...props}>
+      <Wrapper variant="sm" shadow="md" cursor={"pointer"} {...props}>
         <SampleInfo data={data} />
         <Divider orientation="horizontal" />
         <SampleImage data={data} />
