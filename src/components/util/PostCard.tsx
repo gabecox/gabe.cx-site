@@ -8,8 +8,8 @@ interface PostCardProps {
 
 export const PostCard: React.FC<PostCardProps> = ({
   data = {
-    title: "No Posts!",
-    body: "sorry about that",
+    title: "There are currently no posts!",
+    body: "please check back later",
   },
 }) => {
   return (
