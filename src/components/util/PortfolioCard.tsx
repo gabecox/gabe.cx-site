@@ -34,15 +34,7 @@ const SampleInfo: React.FC<PortfolioCardProps> = ({ data }) => {
 
 const SampleImage: React.FC<PortfolioCardProps> = ({ data }) => {
   const img = require(`/public/images/${data.imagesrc}`);
-  return (
-    <Image
-      src={img}
-      layout={"responsive"}
-      width={"350px"}
-      height={"280px"}
-      quality={100}
-    />
-  );
+  return <Image src={img} layout={"intrinsic"} quality={75} />;
 };
 
 export const PortfolioCard: React.FC<
@@ -50,7 +42,12 @@ export const PortfolioCard: React.FC<
 > = ({ data, ...props }) => {
   return (
     <>
-      <Wrapper variant="sm" shadow="md" cursor={"pointer"} {...props}>
+      <Wrapper
+        variant="sm"
+        shadow="md"
+        height={"100%"}
+        cursor={"pointer"}
+        {...props}>
         <SampleInfo data={data} />
         <Divider orientation="horizontal" />
         <SampleImage data={data} />

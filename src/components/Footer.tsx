@@ -4,15 +4,18 @@ interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = ({}) => {
   return (
-    <Flex
-      position={"absolute"}
-      bottom={"-170px"}
-      zIndex={0}
-      width={"100%"}
-      height={"170px"}
-    >
+    <>
       <br />
-      <Divider />
-    </Flex>
+      <br />
+      <Flex
+        p={4}
+        position={"absolute"}
+        bottom={"-170px"}
+        zIndex={0}
+        width={"100%"}
+        height={"170px"}>
+        <Divider />
+      </Flex>
+    </>
   );
 };
