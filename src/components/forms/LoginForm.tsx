@@ -21,8 +21,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({}) => {
         } else if (response.data?.login.user) {
           router.asPath === "/login" ? router.push("/") : null;
         }
-      }}
-    >
+      }}>
       {({ isSubmitting }) => (
         <Form>
           <InputField
@@ -42,9 +41,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({}) => {
             mt={4}
             type="submit"
             loadingText="Submitting"
-            isLoading={isSubmitting}
-            colorScheme="teal"
-          >
+            isLoading={isSubmitting}>
             Login
           </Button>
           <Flex mt={2}>

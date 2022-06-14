@@ -21,8 +21,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({}) => {
           // register success
           router.asPath === "/register" ? router.push("/") : null;
         }
-      }}
-    >
+      }}>
       {({ isSubmitting }) => (
         <Form>
           <InputField name="username" placeholder="username" label="Username" />
@@ -41,9 +40,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({}) => {
             mt={4}
             type="submit"
             loadingText="Submitting"
-            isLoading={isSubmitting}
-            colorScheme="teal"
-          >
+            isLoading={isSubmitting}>
             Register
           </Button>
         </Form>

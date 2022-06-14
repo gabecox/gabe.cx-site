@@ -18,8 +18,7 @@ export const NewPostForm: React.FC<NewPostFormProps> = ({}) => {
         if (!error) {
           router.push("/posts");
         }
-      }}
-    >
+      }}>
       {({ isSubmitting }) => (
         <Form>
           <InputField
@@ -41,9 +40,7 @@ export const NewPostForm: React.FC<NewPostFormProps> = ({}) => {
             mt={4}
             type="submit"
             loadingText="Posting"
-            isLoading={isSubmitting}
-            colorScheme="teal"
-          >
+            isLoading={isSubmitting}>
             Post
           </Button>
         </Form>

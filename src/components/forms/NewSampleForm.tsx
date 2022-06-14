@@ -18,8 +18,7 @@ export const NewSampleForm: React.FC<NewSampleFormProps> = ({}) => {
         if (!error) {
           router.push("/samples");
         }
-      }}
-    >
+      }}>
       {({ isSubmitting }) => (
         <Form>
           <InputField
@@ -58,8 +57,7 @@ export const NewSampleForm: React.FC<NewSampleFormProps> = ({}) => {
             type="submit"
             loadingText="Posting"
             isLoading={isSubmitting}
-            colorScheme="teal"
-          >
+            colorScheme="teal">
             Create
           </Button>
         </Form>

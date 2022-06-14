@@ -28,6 +28,7 @@ export type LoginCredentials = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  contactGabe: Scalars['Boolean'];
   createPost: Post;
   createSample: Sample;
   deletePost: Scalars['Boolean'];
@@ -38,6 +39,13 @@ export type Mutation = {
   register: UserResponse;
   updatePost?: Maybe<Post>;
   updateSample?: Maybe<Sample>;
+};
+
+
+export type MutationContactGabeArgs = {
+  content: Scalars['String'];
+  replyTo: Scalars['String'];
+  subject: Scalars['String'];
 };
 
 
@@ -168,6 +176,15 @@ export type RegularSampleFragment = { __typename?: 'Sample', id: number, created
 
 export type RegularUserFragment = { __typename?: 'User', id: number, username: string };
 
+export type ContactGabeMutationVariables = Exact<{
+  replyTo: Scalars['String'];
+  content: Scalars['String'];
+  subject: Scalars['String'];
+}>;
+
+
+export type ContactGabeMutation = { __typename?: 'Mutation', contactGabe: boolean };
+
 export type CreatePostMutationVariables = Exact<{
   options: PostInput;
 }>;
@@ -253,6 +270,15 @@ export const RegularUserFragmentDoc = gql`
   username
 }
     `;
+export const ContactGabeDocument = gql`
+    mutation ContactGabe($replyTo: String!, $content: String!, $subject: String!) {
+  contactGabe(replyTo: $replyTo, subject: $subject, content: $content)
+}
+    `;
+
+export function useContactGabeMutation() {
+  return Urql.useMutation<ContactGabeMutation, ContactGabeMutationVariables>(ContactGabeDocument);
+};
 export const CreatePostDocument = gql`
     mutation CreatePost($options: PostInput!) {
   createPost(options: $options) {

@@ -1,0 +1,3 @@
+mutation ContactGabe($replyTo: String!, $content: String!, $subject: String!) {
+  contactGabe(replyTo: $replyTo, subject: $subject, content: $content)
+}
