@@ -39,6 +39,7 @@ export const MultiContentSideBar: React.FC<
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [drawerContent, setDrawerContent] = useState(options[0]);
   const { as, ...rest } = props;
+
   return (
     <>
       {options.map((option, i) => (
@@ -54,10 +55,14 @@ export const MultiContentSideBar: React.FC<
           {option.buttonText}
         </Button>
       ))}
-      <Drawer onClose={onClose} isOpen={isOpen} size={drawerContent.size}>
+      <Drawer
+        onClose={onClose}
+        isOpen={isOpen}
+        size={drawerContent.size}
+        preserveScrollBarGap>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <DrawerCloseButton tabIndex={-1} />
           <DrawerHeader>{drawerContent.title}</DrawerHeader>
           <DrawerBody>{drawerContent.body}</DrawerBody>
         </DrawerContent>

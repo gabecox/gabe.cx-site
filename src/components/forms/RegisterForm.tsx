@@ -10,6 +10,7 @@ interface RegisterFormProps {}
 export const RegisterForm: React.FC<RegisterFormProps> = ({}) => {
   const router = useRouter();
   const [{}, register] = useRegisterMutation();
+
   return (
     <Formik
       initialValues={{ username: "", password: "", email: "" }}
@@ -24,12 +25,23 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({}) => {
       }}>
       {({ isSubmitting }) => (
         <Form>
-          <InputField name="username" placeholder="username" label="Username" />
+          <InputField
+            isrequired
+            name="username"
+            placeholder="username"
+            label="Username"
+          />
           <Box mt={4}>
-            <InputField name="email" placeholder="email" label="Email" />
+            <InputField
+              isrequired
+              name="email"
+              placeholder="email"
+              label="Email"
+            />
           </Box>
           <Box mt={4}>
             <InputField
+              isrequired
               name="password"
               placeholder="password"
               label="Password"

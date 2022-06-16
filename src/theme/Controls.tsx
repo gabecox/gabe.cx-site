@@ -6,7 +6,6 @@ export const Button: ComponentStyleConfig = {
     outline: {
       border: "2px solid",
       borderColor: "peripheralText",
-      // : "peripheral",
       color: "peripheralText",
     },
     solid: {

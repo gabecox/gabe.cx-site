@@ -12,47 +12,50 @@ export const ContactForm: React.FC<ContactFormProps> = ({}) => {
   const [{}, contactGabe] = useContactGabeMutation();
 
   return (
-    <Formik
-      initialValues={{ replyTo: "", subject: "", content: "" }}
-      onSubmit={async (values) => {
-        const result = await contactGabe({ ...values });
-        if (result) {
-          router.reload();
-        }
-      }}>
-      {({ isSubmitting }) => (
-        <Form>
-          <InputField
-            name="replyTo"
-            placeholder="email"
-            label="Your Email"
-            required
-          />
-          <InputField
-            required
-            name="subject"
-            placeholder="subject"
-            label="Subject"
-          />
-          <Box mt={4}>
+    <>
+      <Formik
+        initialValues={{ replyTo: "", subject: "", content: "" }}
+        onSubmit={async (values) => {
+          const result = await contactGabe({ ...values });
+          if (result) {
+            router.reload();
+          }
+        }}>
+        {({ isSubmitting }) => (
+          <Form>
             <InputField
-              textarea
-              name="content"
-              placeholder="message..."
-              label="Message"
-              autoCorrect=""
-              required
+              isrequired
+              name="replyTo"
+              placeholder="email"
+              label="Your Email"
             />
-          </Box>
-          <Button
-            mt={4}
-            type="submit"
-            loadingText="Sending"
-            isLoading={isSubmitting}>
-            Send
-          </Button>
-        </Form>
-      )}
-    </Formik>
+            <InputField
+              isrequired
+              name="subject"
+              placeholder="subject"
+              label="Subject"
+            />
+            <Box mt={4}>
+              <InputField
+                textarea
+                isrequired
+                name="content"
+                placeholder="message..."
+                label="Message"
+                autoCorrect=""
+              />
+            </Box>
+
+            <Button
+              mt={4}
+              type="submit"
+              loadingText="Sending"
+              isLoading={isSubmitting}>
+              Send
+            </Button>
+          </Form>
+        )}
+      </Formik>
+    </>
   );
 };
