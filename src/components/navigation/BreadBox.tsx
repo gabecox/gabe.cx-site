@@ -51,8 +51,8 @@ export const BreadBox: React.FC<BreadBoxProps & FlexProps> = ({
                   <BreadcrumbLink
                     color={
                       crumbs[crumbs.length - 1] === link.title
-                        ? "peripheralActive"
-                        : "peripheralText"
+                        ? "active"
+                        : "text"
                     }>
                     {link.title}
                   </BreadcrumbLink>

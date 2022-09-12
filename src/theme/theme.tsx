@@ -36,8 +36,8 @@ const theme = extendTheme({
         _dark: "rgba(0, 0, 0, 0.2)",
       },
       active: {
-        default: "#FAA613",
-        _dark: "#1E3231",
+        default: "#FBFEFB",
+        _dark: "#16161D",
       },
     },
     radii: {
