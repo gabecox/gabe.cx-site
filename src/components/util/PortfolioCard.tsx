@@ -44,9 +44,9 @@ export const PortfolioCard: React.FC<
     <>
       <Wrapper
         variant="sm"
-        shadow="md"
         height={"100%"}
         cursor={"pointer"}
+        borderWidth="2px"
         {...props}>
         <SampleInfo data={data} />
         <Divider orientation="horizontal" />

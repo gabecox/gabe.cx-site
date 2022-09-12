@@ -11,6 +11,7 @@ interface LoginFormProps {}
 export const LoginForm: React.FC<LoginFormProps> = ({}) => {
   const router = useRouter();
   const [{}, login] = useLoginMutation();
+
   return (
     <Formik
       initialValues={{ usernameOrEmail: "", password: "" }}
@@ -34,7 +35,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({}) => {
               name="password"
               placeholder="password"
               label="Password"
-              type="password"
+              type={"password"}
             />
           </Box>
           <Button

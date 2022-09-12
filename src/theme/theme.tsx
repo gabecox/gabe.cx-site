@@ -1,101 +1,62 @@
 import { extendTheme } from "@chakra-ui/react";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
-import { Button } from "./Controls";
-import { Text, Heading } from "./Words";
 
 const fonts = { mono: `'Menlo', monospace` };
 
-const breakpoints = createBreakpoints({
+const breakpoints = {
   sm: "40em",
   md: "52em",
   lg: "64em",
   xl: "80em",
-});
-
-const _technoSoft = {
-  SpaceCadet: "#1D2951",
-  ChromeYellow: "#FAA613",
-  TeaGreen: "#CBEFB6",
-  LilacLuster: "#AF9AB2",
-  TaupeGrey: "#9A8F97",
-  Nyanza: "#E7F8DE",
-  CosmicLatte: "#FFFAEB",
 };
-
-const _logoCore = {
-  Cultured: "#F7F9F9",
-  Opal: "#BED8D4",
-  Copper: "#A8763E",
-  SpaceCadet: "#151A3C",
-  Cinnabar: "#F24236",
-  // Jet: "#303036",
-  Jet: "#4D4D56",
-  DimGrey: "#60606C",
-};
-
 const theme = extendTheme({
   semanticTokens: {
     colors: {
       text: {
-        default: _technoSoft.SpaceCadet,
-        _dark: _logoCore.Opal,
-      },
-      active: {
-        default: _technoSoft.ChromeYellow,
-        _dark: _logoCore.SpaceCadet,
-      },
-      heading: {
-        default: _technoSoft.TaupeGrey,
-        _dark: _logoCore.Cultured,
-      },
-      peripheralText: {
-        default: _technoSoft.SpaceCadet,
-        _dark: _logoCore.Opal,
-      },
-      peripheralActive: {
-        default: _technoSoft.Nyanza,
-        _dark: _logoCore.SpaceCadet,
-      },
-      peripheralHighlight: {
-        default: _technoSoft.ChromeYellow,
-        _dark: _logoCore.Opal,
-      },
-      peripheralBg: {
-        default: _technoSoft.LilacLuster,
-        _dark: _logoCore.Copper,
-      },
-      peripheralContBg: {
-        default: _technoSoft.CosmicLatte,
-        _dark: _logoCore.Jet,
+        default: "#16161D",
+        _dark: "#FBFEFB",
       },
       mainBg: {
-        default: _technoSoft.Nyanza,
-        _dark: _logoCore.DimGrey,
+        default: "#FBFEFB",
+        _dark: "#16161D",
       },
       contentBg: {
-        default: _technoSoft.CosmicLatte,
-        _dark: _logoCore.Jet,
+        default: "#FBFBF2",
+        _dark: "#1E3231",
+      },
+      highlight: {
+        default: "#FAA613",
+        _dark: "#D5A021",
+      },
+      standout: {
+        default: "#FFF703",
+        _dark: "#1500FF",
+      },
+      faded: {
+        default: "rgba(255, 255, 255, 0.2)",
+        _dark: "rgba(0, 0, 0, 0.2)",
+      },
+      active: {
+        default: "#FAA613",
+        _dark: "#1E3231",
       },
     },
     radii: {
       button: "12px",
     },
   },
-
   styles: {
     global: {
       "html, body": {
         background: "mainBg",
+        color: "text",
       },
     },
   },
+  colors: {
+    black: "#16161D",
+  },
   fonts,
   breakpoints,
-  components: {
-    Button,
-    Text,
-    Heading,
-  },
 });
 
 export default theme;

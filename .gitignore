@@ -36,5 +36,5 @@ yarn-error.log*
 goxtodo.md
 /public/images/allinmehead.png
 /src/components/gabecx.code-workspace
-/src/pages/forgot-password/[token].tsx
+/src/pages/forgot-password/
 /src/pages/resume.tsx

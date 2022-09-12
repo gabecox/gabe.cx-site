@@ -25,7 +25,8 @@ export const DarkModeSwitch: React.FC<HTMLChakraProps<any>> = ({
       icon={sunMoon}
       onClick={toggleColorMode}
       aria-label="Toggle Theme"
-      color={"peripheralText"}
+      color={"standout"}
+      bg={"faded"}
       {...rest}>
       {children}
     </IconButton>

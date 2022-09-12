@@ -51,7 +51,8 @@ export const MultiContentSideBar: React.FC<
             onOpen();
           }}
           {...option.options}
-          {...rest}>
+          {...rest}
+          color={"text"}>
           {option.buttonText}
         </Button>
       ))}
@@ -61,7 +62,7 @@ export const MultiContentSideBar: React.FC<
         size={drawerContent.size}
         preserveScrollBarGap>
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent background={"contentBg"}>
           <DrawerCloseButton tabIndex={-1} />
           <DrawerHeader>{drawerContent.title}</DrawerHeader>
           <DrawerBody>{drawerContent.body}</DrawerBody>
